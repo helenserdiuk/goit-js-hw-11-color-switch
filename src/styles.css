@@ -1,0 +1,10 @@
+button {
+display: flex;
+padding: 10px 20px;
+margin: 50px auto;
+border-radius: 40%;
+font-size: 20px;
+font-weight: 600;
+background-color: blueviolet;
+border: 2px solid black;
+}
