@@ -2,6 +2,7 @@ import './styles.css';
 
 const btnStart = document.querySelector('[data-action="start"]');
 const btnStop = document.querySelector('[data-action="stop"]');
+const btn = document.querySelector('button')
 
 const colors = [
   '#FFFFFF',
@@ -20,6 +21,7 @@ const randomIntegerFromInterval = (min, max) => {
 let addTime = null;
 
 btnStart.addEventListener('click', () => {
+  btn.setAttribute("disabled", "disabled")
   addTime = setInterval(() => {
     document.body.style.backgroundColor =
       colors[randomIntegerFromInterval(0, colors.length - 1)];
@@ -27,5 +29,6 @@ btnStart.addEventListener('click', () => {
 });
 
 btnStop.addEventListener('click', () => {
+  btn.removeAttribute("disabled", "disabled")
   clearInterval(addTime);
 });
